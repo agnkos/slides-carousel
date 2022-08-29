@@ -1,0 +1,108 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item {
+    display: none;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-item-hidden {
+    display: none;
+}
+
+.carousel-item-visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+}
+
+#carousel-button-prev {
+    transform: translate(50%, -50%);
+    margin-left: 20px;
+}
+
+#carousel-button-next {
+    transform: translate(-50%, -50%);
+    margin-right: 20px;
+}
+
+.carousel-actions i {
+    color: rgb(128, 128, 128);
+    transform: scale(2);
+    cursor: pointer;
+    text-shadow: 0 0 1px black;
+}
+
+.carousel-actions i:hover {
+    color: rgba(0, 0, 0, 0.899);
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.dots {
+    width: 200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgb(128, 128, 128);
+    transition: background-color .5s ease;
+    cursor: pointer;
+}
+
+.dot-active,
+.dot:hover {
+    background-color: rgba(0, 0, 0, 0.899);
+}
+
+/* .dot:hover {
+    background-color: darkslategray;
+} */
+
+.item-text {
+    position: absolute;
+    bottom: 20px;
+    background-color: rgba(128, 128, 128, 0.6);
+    width: 100%;
+    text-align: center;
+    color: antiquewhite;
+    text-shadow: 0 0 1px black;
+    font-family: 'Roboto', sans-serif;
+}
